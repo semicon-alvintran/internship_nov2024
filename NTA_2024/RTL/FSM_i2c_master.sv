@@ -8,9 +8,10 @@ module FSM_i2c_master(
     input logic ACK_ADDR,
     input logic sda_in,
     
-    output logic shift_en,
+	 output logic m_stop,
+    output logic hold,
     output logic [7:0] odata,
-    output  logic i2c_sda, 
+    output logic i2c_sda, 
     output logic i2c_scl
 );
     typedef enum logic [2:0] {
@@ -28,12 +29,12 @@ module FSM_i2c_master(
     logic [3:0] count;
     logic i2c_scl_en;
     logic [7:0] reg_out;
-  
-    assign odata = reg_out;
+	 logic [6:0] address_store;
+	 logic [7:0] reg_in;
+    
+	 assign odata = reg_out;
     assign i2c_scl = (i2c_scl_en == 0) ? 1 : clk;
-
-
-   
+	 
   
   always @(negedge clk or negedge reset_n) begin
         if (~reset_n) begin
@@ -46,23 +47,37 @@ module FSM_i2c_master(
             end
         end 
     end
-  
+	 
+	  always @(posedge clk or negedge reset_n) begin
+        if (~reset_n) begin
+            reg_in <= 8'b0;
+				address_store <= 7'b0;
+        end else begin
+           if(start && (rw==0)) begin
+					 reg_in <= idata;
+					 address_store <= address;
+			  end else begin
+					 address_store <= address;
+			  end
+		  end
+    end
+	 
     always @(posedge clk or negedge reset_n) begin
         if (~reset_n) begin
             state <= IDLE;
-            shift_en  <= 0;
+				hold <= 1'b0;
             count <= 4'b0;
             i2c_sda <= 1'b1;
+				m_stop <= 1'b1;
         end else begin 
             case (state)
                 // state IDLE
                 IDLE: begin
                     i2c_sda <= 1'b1;
-                    shift_en <= 1'b0;
                     if (start) begin
                         state <= START; 
                     end else begin
-                        state <= IDLE; 
+                        state <= IDLE;
                     end
                 end
 
@@ -71,11 +86,12 @@ module FSM_i2c_master(
                     i2c_sda <= 1'b0;
                     state <= ADDR;
                     count <= 6;
+						  m_stop <= 1'b0;
                 end
 
                 // state ADDR
                 ADDR: begin
-                    i2c_sda <= address[count];
+                    i2c_sda <= address_store[count];
                     if (count == 0) begin 
                         state <= RW; 
                     end else begin 
@@ -94,23 +110,30 @@ module FSM_i2c_master(
                     if (ACK_ADDR) begin
                         i2c_sda <= 1'b1;
                         state <= DATA;
-                        count <= 4'd7;
-                    end else if (i2c_sda == 0) begin
+                    end else if (sda_in == 1) begin
                         state <= ACKADDR;
                     end else begin
                         state <= STOP;
+								m_stop <= 1;
                     end
+						  
+						  if(~rw) begin
+								count <= 4'd7;
+						  end else begin
+								count <= 4'd9;
+						  end
                 end
 
                 // state DATA
                 DATA: begin
                     if (~rw) begin
-                        i2c_sda <= idata[count];
+                        i2c_sda <= reg_in[count];
                     end else begin
                       	i2c_sda <= sda_in;
                       	reg_out[count] <= sda_in;
+								hold <= 1'b1;
                     end
-
+							
                     if (count == 0) begin 
                         state <= ACKDATA; 
                     end else begin 
@@ -127,7 +150,9 @@ module FSM_i2c_master(
                 // state STOP
                 STOP: begin
                     i2c_sda <= 1'b0;
+						  hold <= 1'b0;
                     state <= IDLE;
+						  m_stop <= 1;
                 end
 
                 default: state <= IDLE;

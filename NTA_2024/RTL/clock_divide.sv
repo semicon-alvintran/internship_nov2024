@@ -1,9 +1,9 @@
 module clock_divide(
 	input logic clk,
-    input logic rst_n,
+   input logic rst_n,
   	input logic [6:0] address,
   	input logic [7:0] writedata,
-
+	output logic [9:0] stretch,
   	output logic clk_out
 );
   localparam logic [2:0] CLK_400KHZ = 3'd4;
@@ -13,6 +13,7 @@ module clock_divide(
   logic [9:0] counter;
   logic [9:0] clk_in; 
   assign clk_in = {writedata,2'b0};
+  assign stretch = (count<<1) + 2;
   always@(posedge clk or negedge rst_n) begin
     if(~rst_n) begin
       count <=  8'b0;

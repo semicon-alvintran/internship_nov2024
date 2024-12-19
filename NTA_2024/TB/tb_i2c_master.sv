@@ -12,9 +12,9 @@ module tb_FSM_i2c_master;
     logic ACK_ADDR;
 
 	logic sda_in;  
-    logic shift_en;
+    logic hold;
     logic [7:0] odata;
-    tri i2c_sda; // SDA bus (bidirectional)
+    logic i2c_sda; // SDA bus (bidirectional)
     logic i2c_scl;
 
     // Instantiate DUT
@@ -27,7 +27,7 @@ module tb_FSM_i2c_master;
         .idata(idata),
         .ACK_ADDR(ACK_ADDR),
         .sda_in(sda_in),
-        .shift_en(shift_en),
+      	.hold(hold),
         .odata(odata),
         .i2c_sda(i2c_sda),
       .i2c_scl(i2c_scl)

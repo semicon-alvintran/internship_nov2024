@@ -12,7 +12,7 @@ module clock_divide_tb;
   logic clk_out;
 
   // Clock signal generation
-  localparam CLK_PERIOD = 100; // Clock period in ns (100 MHz)
+  localparam CLK_PERIOD = 50; // Clock period in ns (200 MHz)
   initial clk = 0;
   always #(CLK_PERIOD / 2) clk = ~clk;
 
@@ -35,11 +35,11 @@ module clock_divide_tb;
     writedata = 0;
 
     // Reset the DUT
-    #20 rst_n = 1;
-
-    address = 7'd1;
-    writedata = 8'd25; // Example input for division
-    #9000;
+    #10 rst_n = 1;
+	 #50;
+    address = 7'd0;
+    writedata = 8'd50; // Example input for division
+    #100000;
 
     // Finish simulation
     $stop;

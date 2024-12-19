@@ -1,4 +1,5 @@
 module FSM_i2c_slave(
+	 input  logic m_stop,
     input  logic reset_n,
     input  logic i2c_sda,    // Data line (from master to slave)
     input  logic i2c_scl,    // Clock line
@@ -10,6 +11,7 @@ module FSM_i2c_slave(
         IDLE,       // Wait for START condition
         ADDR,       // Address phase
         RW,         // Read/Write phase
+		  bool,
         DATA_WRITE, // Write data to slave
         DATA_READ   // Read data from slave
     } state_t;
@@ -23,7 +25,7 @@ module FSM_i2c_slave(
     logic [3:0] bit_count;      // Bit counter
 
     assign valid_address = (state == RW) && (addr_buffer == slave_address);
-	assign data_reg = data_buffer;
+	 assign data_reg = data_buffer;
   always @(posedge i2c_scl or negedge reset_n) begin
         if (~reset_n) begin
             state <= IDLE;
@@ -35,10 +37,10 @@ module FSM_i2c_slave(
             case (state)
                 // Wait for START condition
                 IDLE: begin
-                    if (i2c_sda == 0 && i2c_scl == 1) begin // Detect START
+                    if (i2c_sda == 0 && i2c_scl == 1 && m_stop == 0) begin // Detect START
                         state <= ADDR;
                         bit_count <= 6; // 7-bit address
-                    end
+                    end 
                 end
 
                 // Receive 7-bit address
@@ -46,7 +48,9 @@ module FSM_i2c_slave(
                     addr_buffer[bit_count] <= i2c_sda;
                     if (bit_count == 0) begin
                         state <= RW;
-                    end else begin
+                    end else if(m_stop) begin
+								state <= IDLE;
+						  end else begin
                         bit_count <= bit_count - 1;
                     end
                 end
@@ -55,14 +59,17 @@ module FSM_i2c_slave(
                 RW: begin
                     rw_bit <= i2c_sda;
                     if (addr_buffer == slave_address) begin
-                        sda_out <= 0; // Acknowledge address match
-                        state <= (rw_bit) ? DATA_READ : DATA_WRITE; // Determine next state
-                        bit_count <= 7; // Prepare for 8-bit data
+                        sda_out <= 1; // Acknowledge address match
+								state <= bool;
+								bit_count <= 7;// Prepare for 8-bit data
                     end else begin
+								sda_out <= 0;
                         state <= IDLE; // Ignore if address doesn't match
                     end
                 end
-
+					 bool: begin
+						state <= (rw_bit) ? DATA_READ : DATA_WRITE; // Determine next state
+					 end
                 // Write data to slave
                 DATA_WRITE: begin
                     data_buffer[bit_count] <= i2c_sda; // Capture data from SDA
