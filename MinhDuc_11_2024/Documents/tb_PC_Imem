@@ -1,0 +1,179 @@
+# run 1000ns
+Memory[0] = 06400093
+Memory[1] = 0c808113
+Memory[2] = f9c10193
+Memory[3] = f3818213
+Memory[4] = 06d20293
+Memory[5] = 4ce00093
+Memory[6] = 7f008113
+Memory[7] = bfa10193
+Memory[8] = 83018213
+Memory[9] = 46020293
+Memory[10] = 00000013
+Memory[11] = 00400113
+Memory[12] = 00800193
+Memory[13] = 00c00213
+Memory[14] = 01000293
+Memory[15] = 01400313
+Memory[16] = 01800393
+Memory[17] = 01c00413
+Memory[18] = ff000113
+Memory[19] = f00ff06f
+Memory[20] = 123456f3
+Memory[21] = 000080ff
+Memory[22] = 00600293
+Memory[23] = 00a00313
+Memory[24] = 00e00393
+Memory[25] = 01200413
+Time: 10, PC: 00000000, Instruction: 06400093, Immediate: 00000064, immsel: 000
+Time: 15, PC: 00000004, Instruction: 0c808113, Immediate: 000000c8, immsel: 000
+Time: 25, PC: 00000008, Instruction: f9c10193, Immediate: ffffff9c, immsel: 000
+Time: 30, PC: 00000008, Instruction: f9c10193, Immediate: ffffff83, immsel: 001
+Time: 35, PC: 0000000c, Instruction: f3818213, Immediate: ffffff24, immsel: 001
+Time: 45, PC: 00000010, Instruction: 06d20293, Immediate: 00000065, immsel: 001
+Time: 50, PC: 00000010, Instruction: 06d20293, Immediate: zzzzz0Z4, immsel: 010
+Time: 55, PC: 00000014, Instruction: 4ce00093, Immediate: zzzzz9Z0, immsel: 010
+Time: 65, PC: 00000018, Instruction: 7f008113, Immediate: zzzzzfZ2, immsel: 010
+Time: 70, PC: 00000018, Instruction: 7f008113, Immediate: zzzzzzzZ, immsel: 011
+Time: 75, PC: 0000001c, Instruction: bfa10193, Immediate: zzzzzzzZ, immsel: 011
+Time: 85, PC: 00000020, Instruction: 83018213, Immediate: zzzzzzzZ, immsel: 011
+Time: 90, PC: 00000020, Instruction: 83018213, Immediate: zzzzzzzz, immsel: 100
+Time: 95, PC: 00000024, Instruction: 46020293, Immediate: zzzzzzzz, immsel: 100
+Time: 105, PC: 00000028, Instruction: 00000013, Immediate: zzzzzzzz, immsel: 100
+Time: 110, PC: 00000028, Instruction: 00000013, Immediate: zzzzzzzz, immsel: 101
+Time: 115, PC: 0000002c, Instruction: 00400113, Immediate: zzzzzzzz, immsel: 101
+Time: 125, PC: 00000030, Instruction: 00800193, Immediate: zzzzzzzz, immsel: 101
+Time: 130, PC: 00000030, Instruction: 00800193, Immediate: zzzzzzzz, immsel: 110
+Time: 135, PC: 00000034, Instruction: 00c00213, Immediate: zzzzzzzz, immsel: 110
+Time: 145, PC: 00000038, Instruction: 01000293, Immediate: zzzzzzzz, immsel: 110
+Time: 150, PC: 00000038, Instruction: 01000293, Immediate: zzzzzzzz, immsel: 111
+Time: 155, PC: 0000003c, Instruction: 01400313, Immediate: zzzzzzzz, immsel: 111
+Time: 165, PC: 00000040, Instruction: 01800393, Immediate: zzzzzzzz, immsel: 111
+Time: 170, PC: 00000040, Instruction: 01800393, Immediate: 00000018, immsel: 000
+Time: 175, PC: 00000044, Instruction: 01c00413, Immediate: 0000001c, immsel: 000
+Time: 185, PC: 00000048, Instruction: ff000113, Immediate: fffffff0, immsel: 000
+Time: 190, PC: 00000048, Instruction: ff000113, Immediate: ffffffe2, immsel: 001
+Time: 195, PC: 0000004c, Instruction: f00ff06f, Immediate: ffffff00, immsel: 001
+Time: 205, PC: 00000050, Instruction: 123456f3, Immediate: 0000012d, immsel: 001
+Time: 210, PC: 00000050, Instruction: 123456f3, Immediate: zzzzz2Zc, immsel: 010
+Time: 215, PC: 00000054, Instruction: 000080ff, Immediate: zzzzz0Z0, immsel: 010
+Time: 225, PC: 00000058, Instruction: 00600293, Immediate: zzzzz0Z4, immsel: 010
+Time: 230, PC: 00000058, Instruction: 00600293, Immediate: zzzzzzzZ, immsel: 011
+Time: 235, PC: 0000005c, Instruction: 00a00313, Immediate: zzzzzzzZ, immsel: 011
+Time: 245, PC: 00000060, Instruction: 00e00393, Immediate: zzzzzzzZ, immsel: 011
+Time: 250, PC: 00000060, Instruction: 00e00393, Immediate: zzzzzzzz, immsel: 100
+Time: 255, PC: 00000064, Instruction: 01200413, Immediate: zzzzzzzz, immsel: 100
+Time: 265, PC: 00000068, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 270, PC: 00000068, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 275, PC: 0000006c, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 285, PC: 00000070, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 290, PC: 00000070, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 295, PC: 00000074, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 305, PC: 00000078, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 310, PC: 00000078, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 315, PC: 0000007c, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 325, PC: 00000080, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 330, PC: 00000080, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 335, PC: 00000084, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 345, PC: 00000088, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 350, PC: 00000088, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 355, PC: 0000008c, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 365, PC: 00000090, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 370, PC: 00000090, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 375, PC: 00000094, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 385, PC: 00000098, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 390, PC: 00000098, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 395, PC: 0000009c, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 405, PC: 000000a0, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 410, PC: 000000a0, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 415, PC: 000000a4, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 425, PC: 000000a8, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 430, PC: 000000a8, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 435, PC: 000000ac, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 445, PC: 000000b0, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 450, PC: 000000b0, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 455, PC: 000000b4, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 465, PC: 000000b8, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 470, PC: 000000b8, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 475, PC: 000000bc, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 485, PC: 000000c0, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 490, PC: 000000c0, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 495, PC: 000000c4, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 505, PC: 000000c8, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 510, PC: 000000c8, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 515, PC: 000000cc, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 525, PC: 000000d0, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 530, PC: 000000d0, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 535, PC: 000000d4, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 545, PC: 000000d8, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 550, PC: 000000d8, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 555, PC: 000000dc, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 565, PC: 000000e0, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 570, PC: 000000e0, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 575, PC: 000000e4, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 585, PC: 000000e8, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 590, PC: 000000e8, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 595, PC: 000000ec, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 605, PC: 000000f0, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 610, PC: 000000f0, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 615, PC: 000000f4, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 625, PC: 000000f8, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 630, PC: 000000f8, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 635, PC: 000000fc, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 645, PC: 00000100, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 650, PC: 00000100, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 655, PC: 00000104, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 665, PC: 00000108, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 670, PC: 00000108, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 675, PC: 0000010c, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 685, PC: 00000110, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 690, PC: 00000110, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 695, PC: 00000114, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 705, PC: 00000118, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 710, PC: 00000118, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 715, PC: 0000011c, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 725, PC: 00000120, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 730, PC: 00000120, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 735, PC: 00000124, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 745, PC: 00000128, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 750, PC: 00000128, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 755, PC: 0000012c, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 765, PC: 00000130, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 770, PC: 00000130, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 775, PC: 00000134, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 785, PC: 00000138, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 790, PC: 00000138, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 795, PC: 0000013c, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 805, PC: 00000140, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 810, PC: 00000140, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 815, PC: 00000144, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 825, PC: 00000148, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 830, PC: 00000148, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 835, PC: 0000014c, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 845, PC: 00000150, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 850, PC: 00000150, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 855, PC: 00000154, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 865, PC: 00000158, Instruction: xxxxxxxx, Immediate: zzzzzxXX, immsel: 010
+Time: 870, PC: 00000158, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 875, PC: 0000015c, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 885, PC: 00000160, Instruction: xxxxxxxx, Immediate: zzzzzzzZ, immsel: 011
+Time: 890, PC: 00000160, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 895, PC: 00000164, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 905, PC: 00000168, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 100
+Time: 910, PC: 00000168, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 915, PC: 0000016c, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 925, PC: 00000170, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 101
+Time: 930, PC: 00000170, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 935, PC: 00000174, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 945, PC: 00000178, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 110
+Time: 950, PC: 00000178, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 955, PC: 0000017c, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 965, PC: 00000180, Instruction: xxxxxxxx, Immediate: zzzzzzzz, immsel: 111
+Time: 970, PC: 00000180, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 975, PC: 00000184, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 985, PC: 00000188, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 000
+Time: 990, PC: 00000188, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+Time: 995, PC: 0000018c, Instruction: xxxxxxxx, Immediate: xxxxxxxx, immsel: 001
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'pc_imem_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2651.195 ; gain = 0.000
